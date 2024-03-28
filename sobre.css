@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b4b1b1;
+}
+
+h3 {
+    color: #000000;
+    margin: 40px;
+    font-size: 15px;
+}
+
+span {
+    color: #000000;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container ul {
+    list-style: none;
+    display: flex;
+}
+
+.container ul li {
+    margin-right: 20px; 
+}
+
+.container ul li:last-child {
+    margin-right: 0; 
+}
+
+.flex ul li a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: none;
+    font-size: 15px; 
+}
+
+.flex div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 5px 13px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cccccc;
+    color: #969494;
+}
+
+.container ul li a:hover{
+
+}
+
+.imga{
+    margin: -15px;
+    margin-left: 21px;
+}
+
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #838383;
+    font-family: sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 800;
+    color: #cacaca;
+}
+
+wrapper {
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+
+main {
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 4s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover -5% cover 40%;
+}
+
+section.modulo p {
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+section.modulo.parallax-1 {
+    background-image: url(https://img.freepik.com/fotos-gratis/xicara-de-cafe-com-leite-bem-feito-com-arte-em-espuma_181624-285.jpg?w=360&t=st=1699367681~exp=1699368281~hmac=0d4c6712e6dffc168ae0313872fffb39e2591bb90b9910cbdc39d26a4036b972);
+}
+
+section.modulo.parallax-2 {
+    background-image: url(https://img.freepik.com/fotos-gratis/variedade-com-livros-e-xicara_23-2148898272.jpg?w=360&t=st=1699367697~exp=1699368297~hmac=0ea3ea72d6df48f54c064fbb3b0a6a2bfc55773dea7d75ecca5e70d5824ab137);
+}
+
+section.modulo.parallax-3 {
+    background-image: url(https://img.freepik.com/fotos-gratis/vista-aerea-de-cafe-fresco-em-uma-xicara_53876-95367.jpg?w=360&t=st=1699367718~exp=1699368318~hmac=fc483e1380748055a0413a7f88eaa58b618b34b8cd8ee184f8463b3f169d1a42);
+}
+
+
+section.modulo.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.519);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 30%, #000000)
+
+}
+
+
+
+
+
+
+section.modulo.parallax h1 {
+    color: hsl(0, 3%, 86%);
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+@keyframes surgir {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+    to{
+        opacity: 1;
+        transform: 0 0 ;
+    }
+}
+
+@media all and (max-width: 760px) {
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+section.modulo.parallax h1{
+    font-size: 1.5em;
+}
+
